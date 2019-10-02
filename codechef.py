@@ -46,7 +46,7 @@ def makingreq(users):
         soup = bs4.BeautifulSoup(p.text, 'html.parser')
         a = soup.find('input', attrs={'name': 'form_build_id'})['value']
         payload['form_build_id'] = a
-        r = s.post('https://www.codechef.com/', data=payload)
+        s.post('https://www.codechef.com/', data=payload)
         urll = url+users
         req = s.get(urll)
         # print(req.text)
