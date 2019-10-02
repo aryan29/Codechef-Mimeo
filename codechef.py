@@ -3,6 +3,7 @@ import bs4
 import re
 import os
 import time
+from getpass import getpass
 url = 'https://www.codechef.com/users/'
 # Fill in your details here to be posted to the login form.
 payload = {
@@ -123,7 +124,7 @@ def tryagain(users):
 
 if __name__ == '__main__':
     users = input("Enter your username ")
-    pas = input("Enter your password")
+    pas = getpass()
     payload['name'] = users
     payload['pass'] = pas
     try:
